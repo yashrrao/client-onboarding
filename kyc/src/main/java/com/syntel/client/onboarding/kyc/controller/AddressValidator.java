@@ -57,6 +57,8 @@ public class AddressValidator {
 
         LOGGER.debug(joiner.toString());
 
+        System.out.println(joiner.toString());
+
         String addressApi = googleApiUrl + joiner.toString() + "&key=AIzaSyAl2HHUtYTljXVNtqnZewkD7AKlb6EMVM4";
 
         System.out.println(addressApi);
@@ -70,10 +72,7 @@ public class AddressValidator {
 
     private boolean isValidAddress(Response response) {
         if (response.getStatus().equals("OK")) {
-            Result result = response.getResults().get(0);
-            if (result.getFormattedAddress() != null) {
-                return true;
-            }
+            return true;
         }
         return false;
     }
