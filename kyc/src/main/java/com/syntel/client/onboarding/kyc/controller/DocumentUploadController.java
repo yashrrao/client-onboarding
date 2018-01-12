@@ -13,7 +13,7 @@ public class DocumentUploadController {
     @PostMapping ("/{fileid}/file")
     public String uploadDocument (@PathVariable long fileId, @RequestParam("file") MultipartFile multipartFile) {
 
-        return true;
+        return "";
     }
 
 

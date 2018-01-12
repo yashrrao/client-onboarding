@@ -26,7 +26,7 @@ public class Application {
         return builder.build();
     }
 
-    @Value("${s3.endpointUrl}") String s3EndPointUrl;
+    /*@Value("${s3.endpointUrl}") String s3EndPointUrl;
     @Value("${s3.accessKey}") String s3AccessKey;
     @Value("${s3.secretKey}") String s3SecretKey;
     @Value("${s3.bucketName") String s3BucketName;
@@ -38,6 +38,6 @@ public class Application {
         amazonS3Client.setEndpoint(s3EndPointUrl);
         return new AwsFileStore(amazonS3Client, s3BucketName);
 
-    }
+    }*/
 
 }
